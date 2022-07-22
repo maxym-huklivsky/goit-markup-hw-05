@@ -129,6 +129,19 @@ a {
 	display: block;
 	padding-top: 32px;
 	padding-bottom: 32px;
+	position: relative;
+}
+
+.nav-link.current::after {
+	position: absolute;
+	bottom: -1px;
+	display: block;
+	content: '';
+	width: 100%;
+	height: 4px;
+
+	background-color: var(--accent-cl);
+	border-radius: 2px;
 }
 
 .header-contacs-item:not(:last-child) {
@@ -267,6 +280,36 @@ a {
 
 .work-item:not(:last-child) {
 	margin-right: 30px;
+}
+
+.work-item {
+	position: relative;
+}
+
+.work-overlay {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: rgb(47, 48, 58, 0.8);
+	opacity: 0;
+}
+
+.work-item:hover .work-overlay {
+	opacity: 1;
+}
+
+.work-text {
+	font-size: 14px;
+	line-height: calc(16 / 14);
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+
+	color: #FFFFFF;
 }
 
 /* Team */
