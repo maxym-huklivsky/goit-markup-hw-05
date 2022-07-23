@@ -134,6 +134,8 @@ a {
 	padding-top: 32px;
 	padding-bottom: 32px;
 	position: relative;
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link.current::after {
@@ -155,6 +157,8 @@ a {
 .contacs-link {
 	display: flex;
 	align-items: center;
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacs-icon {
@@ -180,7 +184,6 @@ a {
 .adress-link:hover,
 .adress-link:focus {
 	color: var(--accent-cl);
-	--color1: var(--accent-cl);
 }
 
 /* !!!index.html */
@@ -225,6 +228,8 @@ a {
 	border: 0;
 	color: var(--wight-txt-cl);
 	background-color: var(--accent-cl);
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-btn:hover,
@@ -300,11 +305,6 @@ a {
 	justify-content: center;
 
 	background-color: rgb(47, 48, 58, 0.8);
-	opacity: 0;
-}
-
-.work-item:hover .work-overlay {
-	opacity: 1;
 }
 
 .work-text {
@@ -373,16 +373,24 @@ a {
 
 	background-color: #ffffff;
 	border-radius: 50%;
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .soc-network:hover,
 .soc-network:focus {
 	background-color: var(--accent-cl);
-	--color4: #ffffff;
+}
+
+.soc-network:hover .soc-icon,
+.soc-network:focus .soc-icon {
+	fill: #ffffff;
 }
 
 .soc-icon {
-	fill: currentColor;
+	fill: #afb1b8;
+
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Clients */
@@ -404,16 +412,24 @@ a {
 
 	border: 1px solid #AFB1B8;
 	border-radius: 4px;
+
+	transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
 .clients-link:focus {
-	--color4: var(--accent-cl);
 	border-color: var(--accent-cl);
 }
 
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+	fill: var(--accent-cl);
+}
+
 .clients-icon {
-	fill: currentColor;
+	fill: #afb1b8;
+
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*!!! portfolio.html */
@@ -450,22 +466,61 @@ a {
 	cursor: pointer;
 	border-radius: 4px;
 	border: 0;
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-btn:hover,
 .filter-btn:focus {
 	color: var(--wight-txt-cl);
 	background-color: var(--accent-cl);
-	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+		0px 1px 2px rgba(0, 0, 0, 0.08),
+		0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .galary-link {
 	display: block;
+
+	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .galary-link:hover,
 .galary-link:focus {
-	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+		0px 4px 4px rgba(0, 0, 0, 0.06),
+		1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.galary-item:hover .galary-overlay {
+	transform: translateY(-100%);
+}
+
+.overlay-container {
+	position: relative;
+
+	overflow: hidden;
+}
+
+.galary-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 100%;
+	left: 0;
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	padding: 63px 24px;
+
+	font-size: 18px;
+	line-height: 156%;
+	letter-spacing: 0.03em;
+
+	color: #FFFFFF;
+	background-color: rgba(33, 150, 243, 0.9);
+	;
 }
 
 .portfolio-wrapper {
@@ -528,6 +583,10 @@ a {
 	letter-spacing: 0.03em;
 }
 
+.adress-link {
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .footer-contacs {
 	color: rgba(255, 255, 255, 0.6);
 	font-size: 14px;
@@ -555,7 +614,7 @@ a {
 }
 
 .join-icon {
-	--color4: #ffffff;
+	fill: #ffffff;
 }
 
 /* Модальне вікно */
