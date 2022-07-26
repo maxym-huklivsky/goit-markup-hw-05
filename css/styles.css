@@ -636,6 +636,7 @@ a {
 
 .backdrop.is-hidden {
 	opacity: 0;
+	visibility: hidden;
 	pointer-events: none;
 }
 
@@ -648,7 +649,7 @@ a {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) scale(1);
-	transition: transform var(--transition);
+	transition: transform var(--transition), visibility var(--transition);
 
 	width: 528px;
 	height: 581px;
