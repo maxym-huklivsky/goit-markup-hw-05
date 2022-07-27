@@ -59,6 +59,8 @@ a {
 }
 
 .current {
+	position: relative;
+
 	color: var(--accent-cl);
 }
 
@@ -134,7 +136,6 @@ a {
 	display: block;
 	padding-top: 32px;
 	padding-bottom: 32px;
-	position: relative;
 
 	transition: color var(--transition);
 }
@@ -630,8 +631,7 @@ a {
 
 	background-color: rgba(0, 0, 0, 0.2);
 	opacity: 1;
-	transition: opacity var(--transition);
-	/* scroll: !!!!!!!!!!!!!!!!!!!!!!!!*/
+	transition: opacity var(--transition), visibility var(--transition);
 }
 
 .backdrop.is-hidden {
