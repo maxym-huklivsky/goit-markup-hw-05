@@ -157,7 +157,7 @@ a {
 }
 
 .contacs-link {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 
 	transition: color var(--transition);
